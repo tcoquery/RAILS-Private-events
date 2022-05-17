@@ -1,0 +1,18 @@
+<h1> Events page </h1>
+
+  <% @event.each do |event| %><br>
+    <%= event.title %>
+    <%= link_to "Show details", event_path(event.id) %>
+  <% end %>
+
+<p>
+<% if user_signed_in?%>
+    <%= link_to "Create a new event", new_event_path %>
+    <br>
+    <%= link_to "Show all my created events", user_path(current_user) %>
+    <br>
+    <%= link_to "Se déconnecter", destroy_user_session_path %>
+  <% else%>
+    <%= link_to "Se connecter", new_user_session_path %>
+  <% end%>
+</p>
