@@ -4,4 +4,8 @@
 <%= @event.description %>
 <%= @event.event_date %>
 
+<% @attendees.each do |attendee|%>
+    <%=  attendee.email%>
+ <%   end %>
+
 <%= button_to "Attend", action: "attend", method: :get%>
