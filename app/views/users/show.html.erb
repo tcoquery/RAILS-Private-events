@@ -1,4 +1,15 @@
+  <h1> My created events </h1>
+  
   <% @event.each do |event| %><br>
+    <%= event.title %>
+    <%= event.location %>
+    <%= event.description %>
+    <%= event.event_date %>
+  <% end %>
+
+<h1> My attended events </h1>
+
+  <% @attended_event.each do |event| %><br>
     <%= event.title %>
     <%= event.location %>
     <%= event.description %>
