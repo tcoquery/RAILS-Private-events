@@ -9,9 +9,24 @@
 
 <h1> My attended events </h1>
 
+<h2> Past events </h2>
+
   <% @attended_event.each do |event| %><br>
+  <% if event.event_date < DateTime.now %>
     <%= event.title %>
     <%= event.location %>
     <%= event.description %>
     <%= event.event_date %>
+    <% end %>
+  <% end %>
+
+  <h2> Future events </h2>
+
+    <% @attended_event.each do |event| %><br>
+  <% if event.event_date > DateTime.now %>
+    <%= event.title %>
+    <%= event.location %>
+    <%= event.description %>
+    <%= event.event_date %>
+    <% end %>
   <% end %>
