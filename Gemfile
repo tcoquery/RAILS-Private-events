@@ -20,7 +20,7 @@ gem "importmap-rails"
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
-
+ gem "bulma-rails", "~> 0.9.3"
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
 
@@ -28,7 +28,7 @@ gem "stimulus-rails"
 gem "jbuilder"
 
 gem 'devise', '~> 4.8', '>= 4.8.1'
-
+gem "font-awesome-sass", "~> 6.1.2"
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 

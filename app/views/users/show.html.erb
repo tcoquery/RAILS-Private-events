@@ -1,32 +1,65 @@
-  <h1> My created events </h1>
-  
-  <% @event.each do |event| %><br>
-    <%= event.title %>
-    <%= event.location %>
-    <%= event.description %>
-    <%= event.event_date %>
-  <% end %>
+<%= render "/layouts/navbar" %>
 
-<h1> My attended events </h1>
 
-<h2> Past events </h2>
 
-  <% @attended_event.each do |event| %><br>
-  <% if event.event_date < DateTime.now %>
-    <%= event.title %>
-    <%= event.location %>
-    <%= event.description %>
-    <%= event.event_date %>
+
+
+<div class="container">
+  <h1 class="title is-5"> Past events </h1>
+  <% @attended_event.each do |event| %>
+    <% if event.event_date < DateTime.now %>
+    <div class="card">
+    <header class="card-header">
+      <p class="card-header-title">
+        <%= event.title %>
+      </p>
+    </header>
+    <div class="card-content">
+      <div class="content">
+        <%= event.description %>
+      </div>
+    </div>
+    <footer class="card-footer">
+      <span class="icon">
+        <i class="fa-solid fa-location-pin"></i>
+      </span>
+      <%= event.location %>
+      <span class="icon">
+        <i class="fa-solid fa-calendar"></i>
+      </span>
+      <%= event.event_date %>
+    </footer>
+    </div>
     <% end %>
   <% end %>
-
-  <h2> Future events </h2>
-
-    <% @attended_event.each do |event| %><br>
-  <% if event.event_date > DateTime.now %>
-    <%= event.title %>
-    <%= event.location %>
-    <%= event.description %>
-    <%= event.event_date %>
+</div>
+<br>
+<div class="container">
+  <h2 class="title is-5"> Future events </h2>
+  <% @attended_event.each do |event| %>
+    <% if event.event_date > DateTime.now %>
+    <div class="card">
+    <header class="card-header">
+      <p class="card-header-title">
+        <%= event.title %>
+      </p>
+    </header>
+    <div class="card-content">
+      <div class="content">
+        <%= event.description %>
+      </div>
+    </div>
+    <footer class="card-footer">
+      <span class="icon">
+        <i class="fa-solid fa-location-pin"></i>
+      </span>
+      <%= event.location %>
+      <span class="icon">
+        <i class="fa-solid fa-calendar"></i>
+      </span>
+      <%= event.event_date %>
+    </footer>
+    </div>
     <% end %>
   <% end %>
+</div>

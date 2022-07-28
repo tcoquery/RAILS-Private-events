@@ -1,0 +1,35 @@
+<nav class="navbar is-success" role="navigation" aria-label="main navigation">
+  <div class="navbar-menu">
+    <div class="navbar-item">
+      <a class="is-info has-text-white has-text-weight-bold" href="/">THE EVENT</a>
+    </div>
+    <div class="navbar-start">
+      <div class="navbar-item">
+        <% if user_signed_in?%>
+        <%= link_to "My events", user_path(current_user), class: "is-info has-text-white" %>
+      </div>
+      <div class="navbar-item">
+          <%= link_to "New event", new_event_path, class: "is-info has-text-white" %>
+      </div> 
+        <% end%>
+      </div>
+    </div>
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+        <% if user_signed_in?%>
+          <div class="button is-light">
+            <%= link_to "Log out", destroy_user_session_path %>
+          </div>
+        <% else%>
+        <div class="button is-light">
+            <%= link_to "Sign in", new_user_session_path %>
+        </div>
+        <% end%>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<br>
+

@@ -1,11 +1,51 @@
+<%= render "/layouts/navbar" %>
 
-<%= @event.title %>
-<%= @event.location %>
-<%= @event.description %>
-<%= @event.event_date %>
+<div class="container">
+    <div class="card">
+        <header class="card-header">
+            <p class="card-header-title">
+                <%= @event.title %>
+            </p>
+        </header>
+        <div class="card-content">
+            <div class="content">
+            Description: <br>
+            <%= @event.description %>
+            </div>
+        </div>
+        <div class="card-content">
+            <div class="content">
+            Attendees: <br>
+            <% @attendees.each do |attendee|%>
+                <ul>
+                    <li><%=attendee.email%></li>
+                </ul>
+            <%   end %>
+            </div>
+        </div>
+        <footer class="card-footer">
+            <div class="card-footer-item">
+                <span class="icon">
+                    <i class="fa-solid fa-location-pin"></i>
+                </span>
+                <%= @event.location %>
+            </div>
+            <div class="card-footer-item">
+                <span class="icon">
+                    <i class="fa-solid fa-calendar"></i>
+                </span>
+                <%= @event.event_date%>
+            </div>
+            <div class="card-footer-item">
+                <%= button_to "Attend", {action: "attend"}, class:"button is-primary" %>
+            </div>
+        </footer>
+    </div>
+</div>
 
-<% @attendees.each do |attendee|%>
-    <%=  attendee.email%>
- <%   end %>
 
-<%= button_to "Attend", action: "attend", method: :get%>
+
+
+
+
+
