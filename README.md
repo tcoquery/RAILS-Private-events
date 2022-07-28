@@ -1,24 +1,19 @@
-# README
+Private Events
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The second Rails project of The Odin Project focused on Active Record Associations.
 
-Things you may want to cover:
+This app is divided into three main pages.
 
-* Ruby version
+The home page which lists all events and the possibility to see the details of these events.
 
-* System dependencies
+A page which lists a single event's details with the possibility for the user to attend the event.
 
-* Configuration
+A page which lists all attended events of a user (past and future)
 
-* Database creation
+![home page](https://i.imgur.com/PK8QgNJ.png)
 
-* Database initialization
+![event details page](https://i.imgur.com/SYreBQA.png)
 
-* How to run the test suite
+![user's events page](https://i.imgur.com/Ay5bQ45.png)
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Styling done with Bulma, authentification with Devise
