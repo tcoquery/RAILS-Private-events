@@ -1,4 +1,4 @@
-Private Events
+#Private Events
 
 The second Rails project of The Odin Project focused on Active Record Associations.
 
@@ -8,7 +8,13 @@ The home page which lists all events and the possibility to see the details of t
 
 A page which lists a single event's details with the possibility for the user to attend the event.
 
-A page which lists all attended events of a user (past and future)
+A page which lists all attended events of a user (past and future).
+
+Styling done with Bulma, authentification with Devise
+
+Try it here : https://pure-fortress-76812.herokuapp.com/
+
+Screenshots :
 
 ![home page](https://i.imgur.com/PK8QgNJ.png)
 
@@ -16,4 +22,4 @@ A page which lists all attended events of a user (past and future)
 
 ![user's events page](https://i.imgur.com/Ay5bQ45.png)
 
-Styling done with Bulma, authentification with Devise
+
